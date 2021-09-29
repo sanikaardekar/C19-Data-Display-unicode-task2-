@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>C19</title>
+</head>
+<body class="bg-light">
+    <div class="container mx-auto bg-light">
+    <div class="row mx-auto mt-4">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link text-warning font-weight-bold" href="#display3">Country-Wise Table<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link text-warning font-weight-bold" href="#display1">Country-Wise- Search</a>
+            <a class="nav-item nav-link text-warning font-weight-bold" href="#display2">World Total</a>
+            <a class="nav-item nav-link text-warning font-weight-bold" href="#display4">Chart</a>
+          </div>
+        </div>
+      </nav>
+        <h2 class="mt-2 ml-3">C19 DATA</h2>
+    </div></div>
+    <div class="container mx-auto bg-light">
+    <div class="row mx-auto mt-4">
+      <div class="modal-body row">
+        <div class="col-md-6">
+          <div class="container mx-auto bg-light table-responsive" id="display3">
+            <div class="mt-4 text-warning lead text-center font-weight-bold">Country-Wise</div>
+            <div class="row mx-auto mt-4">
+              <table class="table table-striped border border-danger">
+                <thead>
+                  <tr class="d">
+                    <th>Country</th>
+                    <th class="dsc">Cases<div class="cases"><i class="fas fa-angle-double-down text-reset"></i></div></th>
+                    <th class="dsc">Deaths<div class="deaths"><i class="fas fa-angle-double-down text-reset"></i></div></th>
+                    <th class="dsc">Active Cases<div class="active_cases"><i class="fas fa-angle-double-down text-reset"></i></div></th>
+                    <th class="dsc">Deaths per 1M<div class="deaths_per_1m_population"><i class="fas fa-angle-double-down text-reset"></i></div></th>
+                  </tr>
+                </thead>
+                <tbody class="tbody"></tbody>
+              </table>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card" id="display1">
+            <div class="input-group rounded">
+              <input type="text" class="form-control rounded search" placeholder="Search for Country" />
+              <span class="input-group-text del-btn border-0 bg-danger"><i class="fas fa-times"></i></span>
+              <span class="input-group-text search-btn border-0 bg-warning">
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title1 country_name text-warning">Country:</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item l1 border border-danger active_cases text-danger font-weight-bold">Active Cases: </li>
+              <li class="list-group-item l2 border border-danger deaths_per_1m_population text-danger font-weight-bold">Deaths per 1M: </li>
+              <li class="list-group-item l3 border border-danger serious_critical text-danger font-weight-bold">Serious Critical: </li>
+              <li class="list-group-item l4 border border-danger total_recovered text-danger font-weight-bold">Total Recovered: </li>
+            </ul>
+          </div>
+          <div class="container bg-light" id="display2">
+            <h3 class="mt-4 text-warning text-center">World Total</h3>
+            <div class="row mx-auto mt-4">
+              <div class="col-sm-6">
+                <div class="card border border-danger"> 
+                  <div class="card-body border border-danger">
+                    <h5 class="card-title total_active_cases ml-2">TOTAL ACTIVE CASES:</h5>
+                    <p class="card-text active_cases_amt ml-2 lead text-danger font-weight-bold"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card border border-danger">
+                  <div class="card-body border border-danger">
+                    <h5 class="card-title total_deaths ml-2">TOTAL DEATHS:</h5>
+                    <p class="card-text deaths_amt ml-2 lead text-danger font-weight-bold"></p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            <div class="row mx-auto mt-4">
+              <div class="col-sm-6">
+                <div class="card border border-danger">
+                  <div class="card-body border border-danger">
+                    <h5 class="card-title total_recovered ml-2">TOTAL RECOVERED:</h5>
+                    <p class="card-text recovered_amt ml-2 lead text-danger font-weight-bold"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card border border-danger">
+                  <div class="card-body border border-danger">
+                    <h5 class="card-title total_deaths_per_1m ml-2">TOTAL DEATHS PER 1M:</h5>
+                    <p class="card-text deaths_per_1m_amt ml-2 lead text-danger font-weight-bold"></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="container mx-auto bg-light mt-4" id="display4">
+              <div class="row mx-auto"> 
+                   <div class="chart-container">
+                   <canvas id="myChart"></canvas>
+                   </div>
+           </div></div>
+        </div>
+        <div class="square rounded p-3 up-btn bg-danger"><i class="fas fa-arrow-up"></i></div>
+      </div>
+      
+    </div>
+    </div>
+    
+    
+    
+  
+
+<footer class="text-center bg-warning footer">
+  <div>
+      <span>Get connected with me on social networks:</span>
+  </div>
+  <div>
+      <a href="" class="ml-2 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="ml-2 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="ml-2 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="ml-2 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+      <div class="text-center">Powered by RAPID API</div>
+  </div>
+  <div class="text-center mt-1">
+    © 2021 Copyright: SANIKA ARDEKAR
+  </div>
+</footer>
+
+ 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="app.js"></script>
+    
+    
+</body>
+</html>
+<!---->
