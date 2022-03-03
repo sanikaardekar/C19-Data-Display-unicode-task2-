@@ -1,7 +1,6 @@
 # unicode-task2
 covid 19 data display using pure html, css and vanilla javascript <br/>
-click the link to view : <br/>
-https://sanikaardekar.github.io/C19-Data-Display-unicode-task2-/ <br/> <br/>
+ <br/> <br/>
 Implemented a table displaying cases, deaths, active cases and deaths per 1M population  country-wise using External Api <br/>
 Implemented a search bar <br/>
 ![Screenshot (4)](https://user-images.githubusercontent.com/80094199/156624161-5e5632ff-876a-40e1-bea3-45e788583f49.png) <br/>
