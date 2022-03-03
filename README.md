@@ -1,5 +1,6 @@
 # unicode-task2
-covid 19 data display using pure html, css and vanilla javascript <br/>
+covid 19 data display using pure html and vanilla javascript <br/>
+Used css and Bootstrap for styling <br/>
  <br/> <br/>
 Implemented a table displaying cases, deaths, active cases and deaths per 1M population  country-wise using External Api <br/>
 Implemented a search bar <br/>
